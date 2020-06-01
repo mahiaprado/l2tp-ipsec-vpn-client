@@ -1,7 +1,7 @@
 FROM alpine:3.8
 
 ENV LANG C.UTF-8
-
+USER root
 RUN set -x && \
     apk add --no-cache \
               openrc \
@@ -18,6 +18,5 @@ COPY xl2tpd.conf /etc/xl2tpd/xl2tpd.conf
 COPY options.l2tpd.client /etc/ppp/options.l2tpd.client
 COPY startup.sh /
 
-USER root
-RUN chmod +x /startup.sh
+RUN ["chmod", "777", "startup.sh"]
 CMD ["/startup.sh"]

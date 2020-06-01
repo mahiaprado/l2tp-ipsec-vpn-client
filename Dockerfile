@@ -19,4 +19,5 @@ COPY options.l2tpd.client /etc/ppp/options.l2tpd.client
 COPY startup.sh /
 
 USER root
+RUN chmod +x /startup.sh
 CMD ["/startup.sh"]

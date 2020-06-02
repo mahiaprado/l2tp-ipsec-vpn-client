@@ -1,5 +1,5 @@
 #!/bin/sh
-
+ls -la
 # template out all the config files using env vars
 sed -i 's/right=.*/right='$VPN_SERVER_IPV4'/' /etc/ipsec.conf
 echo ': PSK "'$VPN_PSK'"' > /etc/ipsec.secrets

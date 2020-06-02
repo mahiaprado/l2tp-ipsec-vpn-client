@@ -5,6 +5,7 @@ USER root
 RUN set -x && \
     apk add --no-cache \
               openrc \
+              bash \
               bash-doc \
               bash-completion \
               libreswan \

@@ -5,6 +5,8 @@ USER root
 RUN set -x && \
     apk add --no-cache \
               openrc \
+              bash-doc \
+              bash-completion \
               libreswan \
               xl2tpd \
               ppp \

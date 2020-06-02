@@ -18,4 +18,4 @@ COPY xl2tpd.conf /etc/xl2tpd/xl2tpd.conf
 COPY options.l2tpd.client /etc/ppp/options.l2tpd.client
 COPY startup.sh /
 
-RUN while true; do echo 'Hit CTRL+C'; sleep 1; done
+CMD ["while true; do echo 'Hit CTRL+C'; sleep 1; done"]
